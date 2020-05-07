@@ -1,6 +1,6 @@
-var loc1= 3;
-var loc2= 4;
-var loc3= 5;
+var loc1= math.floor(math.random()*5);
+var loc2= loc1+1;
+var loc3= loc1+2;
 
 var guess;
 var hits=0;
@@ -17,11 +17,16 @@ while (isSunk==false){
   }
     if (guess == loc1 || guess==loc3 || guess == loc2){
       hits +=1;
-    }
+      alert("HIT");
+    }else{
+      alert("MISS");
+      } 
     if (hits ==3){
       isSunk=true;
       alert("you won");
     }
+    
+    
 }
 
-  
+alert("It took u "+guesses+" guesses to win" );
